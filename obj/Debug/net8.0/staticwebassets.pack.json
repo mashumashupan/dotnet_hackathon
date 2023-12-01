@@ -1,0 +1,61 @@
+{
+  "Files": [
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/wwwroot/_framework/blazor.webassembly.js",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/imj7cjyqcx.gz",
+      "PackagePath": "staticwebassets/_framework/blazor.webassembly.js.gz"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/scopedcss/bundle/dotnet_hackathon.styles.css",
+      "PackagePath": "staticwebassets/dotnet_hackathon.styles.css"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/css/app.css",
+      "PackagePath": "staticwebassets/css/app.css"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/css/bootstrap/bootstrap.min.css",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/css/bootstrap/bootstrap.min.css.map",
+      "PackagePath": "staticwebassets/css/bootstrap/bootstrap.min.css.map"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/favicon.png",
+      "PackagePath": "staticwebassets/favicon.png"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/icon-192.png",
+      "PackagePath": "staticwebassets/icon-192.png"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/index.html",
+      "PackagePath": "staticwebassets/index.html"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/sample-data/weather.json",
+      "PackagePath": "staticwebassets/sample-data/weather.json"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.build.dotnet_hackathon.props",
+      "PackagePath": "build\\dotnet_hackathon.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.dotnet_hackathon.props",
+      "PackagePath": "buildMultiTargeting\\dotnet_hackathon.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.dotnet_hackathon.props",
+      "PackagePath": "buildTransitive\\dotnet_hackathon.props"
+    },
+    {
+      "Id": "obj/Debug/net8.0/staticwebassets/msbuild.dotnet_hackathon.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
