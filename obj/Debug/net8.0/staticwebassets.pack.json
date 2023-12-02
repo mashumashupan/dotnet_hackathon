@@ -13,6 +13,18 @@
       "PackagePath": "staticwebassets/dotnet_hackathon.styles.css"
     },
     {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/Images/image1.jpg",
+      "PackagePath": "staticwebassets/Images/image1.jpg"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/Images/image2.jpg",
+      "PackagePath": "staticwebassets/Images/image2.jpg"
+    },
+    {
+      "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/Images/image3.jpg",
+      "PackagePath": "staticwebassets/Images/image3.jpg"
+    },
+    {
       "Id": "/Users/haruna/workspace/dotnet_hackathon/wwwroot/css/app.css",
       "PackagePath": "staticwebassets/css/app.css"
     },

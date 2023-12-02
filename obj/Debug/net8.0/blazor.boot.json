@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "dotnet_hackathon",
   "resources": {
-    "hash": "sha256-EjjSmmkfMTVZf2kqjFSuHMaLqnj2NPXVSVq8E+CMO+Y=",
+    "hash": "sha256-AI7DuGHmtMfw3ncKwVaMJ2aBaqp91CcazxGMm2mnI6Y=",
     "jsModuleNative": {
       "dotnet.native.8.0.0.vvqx6zz5i0.js": "sha256-LjLDIz9+J7uuiwMlQ4HbNx2BnSpphOtO2MwkoI28vdI="
     },
@@ -208,10 +208,10 @@
       "mscorlib.wasm": "sha256-cDuLeL3OCtVtiid/dyex1MVgbuzDSRwZxKzuP2Dp4mg=",
       "netstandard.wasm": "sha256-A0h86SDieTMoU/wU2JTszWCsUmMuguDcbap0b0BzsmI=",
       "System.Private.CoreLib.wasm": "sha256-/0DNIm/T0C07X7Tuz5uR8JvVCoAfEE2MnfPUSjyS9xc=",
-      "dotnet_hackathon.wasm": "sha256-I+w8t9m+snLZe1pyC+DzqIo+pYWVUNVM89PZWgycn9k="
+      "dotnet_hackathon.wasm": "sha256-q9+IAVc6GugtKbpz7lP/+9vgTbN8BZZKGD9ZhIVTxV0="
     },
     "pdb": {
-      "dotnet_hackathon.pdb": "sha256-iJqaNMxyiUmVCOwKPH/X57edM4KT5H3oIIdoXHVm4nQ="
+      "dotnet_hackathon.pdb": "sha256-S//ZJcxStTPQ+SGDa53yVmrvfHTtxVdjX4NYB+px4Tg="
     }
   },
   "cacheBootResources": true,

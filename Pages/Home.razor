@@ -1,7 +1,67 @@
 ﻿@page "/"
+@inject HttpClient Http
+@inject IJSRuntime JS
 
-<PageTitle>Home</PageTitle>
+<h1>Image</h1>
 
-<h1>Hello, world!</h1>
+<p>
+    <img id="image" />
+</p>
 
-Welcome to your new app.
+<button @onclick="SetImageAsync">
+    Set Image
+</button>
+
+@for (var i = 1; i <= 3; i++)
+{
+    var imageId = i;
+    <button class="btn" @onclick="() => ShowImage(imageId)">
+        Image @imageId
+    </button>
+}
+
+@if (imageSource is not null)
+{
+    <p class="card">
+        <img src="@imageSource" />
+    </p>
+}
+else
+{
+    <p>Please Select Image.</p>
+}
+
+<script>
+  window.setImage = async (imageElementId, imageStream) => {
+    const arrayBuffer = await imageStream.arrayBuffer();
+    const blob = new Blob([arrayBuffer]);
+    const url = URL.createObjectURL(blob);
+    const image = document.getElementById(imageElementId);
+    image.onload = () => {
+      URL.revokeObjectURL(url);
+    }
+    image.src = url;
+  }
+</script>
+
+@code {
+    private string? imageSource;
+
+    private void ShowImage(int id)
+    {
+        imageSource = $"images/image{id}.jpg";
+        Console.WriteLine(imageSource);
+    }
+    private async Task<Stream> GetImageStreamAsync()
+    {
+        return await Http.GetStreamAsync(
+            "https://avatars.githubusercontent.com/u/9141961");
+    }
+
+    private async Task SetImageAsync()
+    {
+        var imageStream = await GetImageStreamAsync(); //ここがAIから受け取った画像になる
+        var dotnetImageStream = new DotNetStreamReference(imageStream);
+        await JS.InvokeVoidAsync("setImage", "image", dotnetImageStream);
+    }
+}
