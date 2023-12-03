@@ -817,10 +817,7 @@
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/staticwebassets/msbuild.buildMultiTargeting.dotnet_hackathon.props
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/staticwebassets/msbuild.buildTransitive.dotnet_hackathon.props
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/staticwebassets.pack.json
-/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/scopedcss/Layout/MainLayout.razor.rz.scp.css
-/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/scopedcss/Layout/NavMenu.razor.rz.scp.css
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/scopedcss/bundle/dotnet_hackathon.styles.css
-/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/scopedcss/projectbundle/dotnet_hackathon.bundle.scp.css
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/imj7cjyqcx.gz
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/lt0onc56n2.gz
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/64zi3swvao.gz
@@ -1030,3 +1027,13 @@
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/refint/dotnet_hackathon.dll
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.pdb
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/ref/dotnet_hackathon.dll
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Win32.SystemEvents.wasm
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/wwwroot/_framework/System.Drawing.Common.wasm
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/wwwroot/_framework/System.Drawing.Common.wasm.gz
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/wwwroot/_framework/Microsoft.Win32.SystemEvents.wasm.gz
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/Microsoft.Win32.SystemEvents.dll
+/Users/haruna/workspace/dotnet_hackathon/bin/Debug/net8.0/System.Drawing.Common.dll
+/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/webcil/Microsoft.Win32.SystemEvents.wasm
+/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/webcil/System.Drawing.Common.wasm
+/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/jp1s24mc3b.gz
+/Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/6sfhel5eat.gz

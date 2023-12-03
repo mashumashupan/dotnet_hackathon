@@ -1,16 +1,54 @@
 ﻿@inherits LayoutComponentBase
-<div class="page">
-    <div class="sidebar">
-        <NavMenu />
-    </div>
+@inject IJSRuntime JSRuntime
 
-    <main>
-        <div class="top-row px-4">
-            <a href="https://learn.microsoft.com/aspnet/core/" target="_blank">About</a>
+<canvas id="canvas" style="display: none;"></canvas>
+@if (imageSource != null)
+{
+    <img id="image" src="@imageSource" />
+}
+else
+{
+    <div class="loader">
+        <div class="jumpy-bars">
+        <div class="bar" id="bar1"></div>
+        <div class="bar" id="bar2"></div>
+        <div class="bar" id="bar3"></div>
+        <div class="bar" id="bar4"></div>
+        <div class="bar" id="bar5"></div>
+        <div class="bar" id="bar6"></div>
+        <div class="bar" id="bar7"></div>
         </div>
+    </div>
+}
 
-        <article class="content px-4">
-            @Body
-        </article>
-    </main>
-</div>
+<script src="makedot.js"></script>
+
+@code {
+    private String? imageSource = null;
+
+    protected override async Task OnInitializedAsync()
+    {
+        await Action();
+    }
+
+    private async Task MakeDot()
+    {
+        await JSRuntime.InvokeVoidAsync("createDotWithGrowingAnimation");
+    }
+
+    private async Task Action()
+    {
+        for (int i = 0; i < 100; i++)
+        {
+            await Task.Delay(1000);
+            await MakeDot();
+            imageSource = await GetImageStream();
+            StateHasChanged(); // 通知して再レンダリングをトリガーする
+        }
+    }
+
+    private async Task<String> GetImageStream()
+    {
+        return await JSRuntime.InvokeAsync<String>("exportCanvasAsImage");
+    }
+}

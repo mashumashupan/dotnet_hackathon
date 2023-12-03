@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "kAojTb5n+/u/fDdt/ojB5qB5X7X4IrITgthhKXTYQe79eIQ4cRSYxBVnPsVpZ85lk5Hpef7FlOdOH3uJ3kX0Tg==",
+  "dgSpecHash": "TVDIUAqkiLH4x/XQ0eELqqnCKaSzoLx9OgkVInfky2wLOno6+RJQGgYqcwVjd6MjvbQiaQv5hewlYkwDiFPj4A==",
   "success": true,
   "projectFilePath": "/Users/haruna/workspace/dotnet_hackathon/dotnet_hackathon.csproj",
   "expectedPackageFiles": [
@@ -30,6 +30,8 @@
     "/Users/haruna/.nuget/packages/microsoft.jsinterop.webassembly/8.0.0/microsoft.jsinterop.webassembly.8.0.0.nupkg.sha512",
     "/Users/haruna/.nuget/packages/microsoft.net.illink.tasks/8.0.0/microsoft.net.illink.tasks.8.0.0.nupkg.sha512",
     "/Users/haruna/.nuget/packages/microsoft.net.sdk.webassembly.pack/8.0.0/microsoft.net.sdk.webassembly.pack.8.0.0.nupkg.sha512",
+    "/Users/haruna/.nuget/packages/microsoft.win32.systemevents/8.0.0/microsoft.win32.systemevents.8.0.0.nupkg.sha512",
+    "/Users/haruna/.nuget/packages/system.drawing.common/8.0.0/system.drawing.common.8.0.0.nupkg.sha512",
     "/Users/haruna/.nuget/packages/system.io.pipelines/8.0.0/system.io.pipelines.8.0.0.nupkg.sha512",
     "/Users/haruna/.nuget/packages/system.text.encodings.web/8.0.0/system.text.encodings.web.8.0.0.nupkg.sha512",
     "/Users/haruna/.nuget/packages/system.text.json/8.0.0/system.text.json.8.0.0.nupkg.sha512",
