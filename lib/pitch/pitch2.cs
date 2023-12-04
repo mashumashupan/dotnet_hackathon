@@ -2,7 +2,7 @@ using System;
 using System.Diagnostics;
 using System.IO;
 
-class Program
+class Pitch2
 {
   // breader と bwriter の定義を追加
     static StreamReader breader;
@@ -13,8 +13,9 @@ class Program
         "A", "Bb", "B", "C", "Db", "D", "Eb", "E", "F", "Gb", "G", "Ab"
     };
     static double[] freq; 
-    static void Main()
+    public static void Action()
     {
+        Console.WriteLine("Hello World!");
         // Pythonスクリプトのパス
         string pythonScriptPath = "./f0.py";
 

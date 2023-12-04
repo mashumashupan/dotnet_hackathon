@@ -1,9 +1,9 @@
 using System;
 using System.Diagnostics;
 
-class Program
+class Call
 {
-    static void Main()
+    public static void Action()
     {
         string pythonScriptPath = "./calculate_volume.py";
         string wavFilePath = "./piano.wav";

@@ -1,5 +1,4 @@
 ﻿@inherits LayoutComponentBase
-@inject IJSRuntime JSRuntime
 
 <canvas id="canvas" style="display: none;"></canvas>
 @if (imageSource != null)
@@ -22,33 +21,3 @@ else
 }
 
 <script src="makedot.js"></script>
-
-@code {
-    private String? imageSource = null;
-
-    protected override async Task OnInitializedAsync()
-    {
-        await Action();
-    }
-
-    private async Task MakeDot()
-    {
-        await JSRuntime.InvokeVoidAsync("createDotWithGrowingAnimation");
-    }
-
-    private async Task Action()
-    {
-        for (int i = 0; i < 100; i++)
-        {
-            await Task.Delay(1000);
-            await MakeDot();
-            imageSource = await GetImageStream();
-            StateHasChanged(); // 通知して再レンダリングをトリガーする
-        }
-    }
-
-    private async Task<String> GetImageStream()
-    {
-        return await JSRuntime.InvokeAsync<String>("exportCanvasAsImage");
-    }
-}
