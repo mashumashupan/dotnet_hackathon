@@ -9,9 +9,22 @@ canvas {
 
 #canvas {
     margin: 0;
-    height: 100vh;
     overflow: hidden;
     background-color: white;
+}
+#image {
+    /* ビューポート全体に広げる */
+  position: fixed; /* または absolute */
+  top: 0;
+  left: 0;
+  width: 100vw; /* ビューポートの幅に合わせる */
+  height: 100vh; /* ビューポートの高さに合わせる */
+
+  /* 画像のサイズを調整 */
+  object-fit: cover;
+
+  /* 必要に応じて、画像の位置を調整 */
+  object-position: center;
 }
 .dot, .ripple {
     position: absolute;

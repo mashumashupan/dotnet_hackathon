@@ -15,7 +15,6 @@ class Pitch2
     static double[] freq; 
     public static void Action()
     {
-        Console.WriteLine("Hello World!");
         // Pythonスクリプトのパス
         string pythonScriptPath = "./f0.py";
 

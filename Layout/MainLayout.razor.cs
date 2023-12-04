@@ -16,7 +16,6 @@ public partial class MainLayout : LayoutComponentBase
     protected override async Task OnInitializedAsync()
     {
         await Action();
-        // ReadAudio();
     }
 
     private async Task MakeDot()
@@ -30,7 +29,9 @@ public partial class MainLayout : LayoutComponentBase
         {
             await Task.Delay(1000);
             await MakeDot();
-            imageSource = await GetImageStream();
+            var source = (await GetImageStream()).Split(",")[1];
+            var image = await StabilityAPI.Call(Convert.FromBase64String(source));
+            imageSource = $"data:image/png;base64,{Convert.ToBase64String(image)}";
             StateHasChanged(); // 通知して再レンダリングをトリガーする
         }
     }

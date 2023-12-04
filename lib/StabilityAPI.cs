@@ -24,7 +24,7 @@ class StabilityAPI
         Console.WriteLine(await Call(bytes));
     }
 
-    static async Task<byte[]> Call(byte[] initImage, 
+    public static async Task<byte[]> Call(byte[] initImage, 
         float imageStrength = 0.33f,
         int steps = 15,
         int seed = 0,

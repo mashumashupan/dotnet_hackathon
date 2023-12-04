@@ -6,12 +6,14 @@ const minSize = 40; // 水玉の最低サイズ
 let useGradient = false; // グラデーションを使用するかどうかのフラグ
 
 function resizeCanvas() {
-    canvas.width = window.innerWidth;
-    canvas.height = window.innerHeight;
+    // canvas.width = window.innerWidth;
+    // canvas.height = window.innerHeight;
+    canvas.width = 1024;
+    canvas.height = 1024;
 }
 
 // ウィンドウのリサイズ時にCanvasのサイズを調整
-window.addEventListener('resize', resizeCanvas);
+// window.addEventListener('resize', resizeCanvas);
 
 // 初期サイズを設定
 resizeCanvas();
