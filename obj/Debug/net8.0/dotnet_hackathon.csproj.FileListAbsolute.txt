@@ -1037,3 +1037,13 @@
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/webcil/System.Drawing.Common.wasm
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/jp1s24mc3b.gz
 /Users/haruna/workspace/dotnet_hackathon/obj/Debug/net8.0/compressed/6sfhel5eat.gz
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.csproj.AssemblyReference.cache
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.GeneratedMSBuildEditorConfig.editorconfig
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.AssemblyInfoInputs.cache
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.AssemblyInfo.cs
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.csproj.CoreCompileInputs.cache
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.MvcApplicationPartsAssemblyInfo.cache
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.sourcelink.json
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.dll
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/refint/dotnet_hackathon.dll
+/Users/satsuki/hackathon/dotnet_hackathon/obj/Debug/net8.0/dotnet_hackathon.pdb
