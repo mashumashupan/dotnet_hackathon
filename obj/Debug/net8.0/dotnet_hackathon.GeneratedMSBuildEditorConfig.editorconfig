@@ -13,23 +13,23 @@ build_property.EnforceExtendedAnalyzerRules =
 build_property._SupportedPlatformList = browser
 build_property.RootNamespace = dotnet_hackathon
 build_property.RootNamespace = dotnet_hackathon
-build_property.ProjectDir = /Users/haruna/workspace/dotnet_hackathon/
+build_property.ProjectDir = /Users/satsuki/hackathon/dotnet_hackathon/
 build_property.EnableComHosting = 
 build_property.EnableGeneratedComInterfaceComImportInterop = false
 build_property.RazorLangVersion = 8.0
 build_property.SupportLocalizedComponentNames = 
 build_property.GenerateRazorMetadataSourceChecksumAttributes = 
-build_property.MSBuildProjectDirectory = /Users/haruna/workspace/dotnet_hackathon
+build_property.MSBuildProjectDirectory = /Users/satsuki/hackathon/dotnet_hackathon
 build_property._RazorSourceGeneratorDebug = 
 
-[/Users/haruna/workspace/dotnet_hackathon/App.razor]
+[/Users/satsuki/hackathon/dotnet_hackathon/App.razor]
 build_metadata.AdditionalFiles.TargetPath = QXBwLnJhem9y
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/haruna/workspace/dotnet_hackathon/Layout/MainLayout.razor]
+[/Users/satsuki/hackathon/dotnet_hackathon/Layout/MainLayout.razor]
 build_metadata.AdditionalFiles.TargetPath = TGF5b3V0L01haW5MYXlvdXQucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 
 
-[/Users/haruna/workspace/dotnet_hackathon/_Imports.razor]
+[/Users/satsuki/hackathon/dotnet_hackathon/_Imports.razor]
 build_metadata.AdditionalFiles.TargetPath = X0ltcG9ydHMucmF6b3I=
 build_metadata.AdditionalFiles.CssScope = 

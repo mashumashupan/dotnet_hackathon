@@ -2209,25 +2209,24 @@
     ]
   },
   "packageFolders": {
-    "/Users/haruna/.nuget/packages/": {}
+    "/Users/satsuki/.nuget/packages/": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "/Users/haruna/workspace/dotnet_hackathon/dotnet_hackathon.csproj",
+      "projectUniqueName": "/Users/satsuki/hackathon/dotnet_hackathon/dotnet_hackathon.csproj",
       "projectName": "dotnet_hackathon",
-      "projectPath": "/Users/haruna/workspace/dotnet_hackathon/dotnet_hackathon.csproj",
-      "packagesPath": "/Users/haruna/.nuget/packages/",
-      "outputPath": "/Users/haruna/workspace/dotnet_hackathon/obj/",
+      "projectPath": "/Users/satsuki/hackathon/dotnet_hackathon/dotnet_hackathon.csproj",
+      "packagesPath": "/Users/satsuki/.nuget/packages/",
+      "outputPath": "/Users/satsuki/hackathon/dotnet_hackathon/obj/",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "/Users/haruna/.nuget/NuGet/NuGet.Config"
+        "/Users/satsuki/.nuget/NuGet/NuGet.Config"
       ],
       "originalTargetFrameworks": [
         "net8.0"
       ],
       "sources": {
-        "/usr/local/share/dotnet/library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
