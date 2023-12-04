@@ -4,6 +4,7 @@ using System.IO;
 
 class Program
 {
+    public static int frameNumber = 1;
   // breader と bwriter の定義を追加
     static StreamReader breader;
     static StreamWriter bwriter;
@@ -53,8 +54,10 @@ class Program
         }
     }
 
+
     static void ConvertFile()
     {
+        
         bool isValue = false;
         string linebuf = "";
 
@@ -66,11 +69,9 @@ class Program
             freq[i] = MINTONE * Math.Pow(2.0, ((double)i / 12.0));
 
         string pyinfile = "./b.txt";
-        string outfile = "./b.csv";
 
         // file open
         OpenReader(pyinfile);
-        OpenWriter(outfile);
         if (breader == null) Environment.Exit(-1);
 
         // read the file
@@ -123,8 +124,8 @@ class Program
 
         // file close
         CloseReader();
-        CloseWriter();
     }
+
 
     static string SpecifyTone(string token)
     {
@@ -148,14 +149,16 @@ class Program
             break;
         }
 
-        Console.WriteLine(f0 + " " + tone);
+        Console.WriteLine($"{frameNumber},{tone}");
+        frameNumber++; 
 
         return tone;
     }
 
 
-    // 以下、OpenReader、CloseReader、OpenWriter、CloseWriter、WriteLineのメソッドもそのまま追加
-  static void OpenReader(string filename)
+
+
+      static void OpenReader(string filename)
       {
           try
           {
@@ -180,31 +183,8 @@ class Program
           }
       }
 
-      static void OpenWriter(string filename)
-      {
-          try
-          {
-              bwriter = new StreamWriter(filename);
-          }
-          catch (Exception e)
-          {
-              Console.WriteLine(e);
-          }
-      }
 
-      static void CloseWriter()
-      {
-          try
-          {
-              bwriter.Close();
-          }
-          catch (Exception e)
-          {
-              Console.WriteLine(e);
-          }
-      }
-
-      static void WriteLine(string word)
+    static void WriteLine(string word)
       {
           try
           {
@@ -219,3 +199,4 @@ class Program
       }
 
 }
+
