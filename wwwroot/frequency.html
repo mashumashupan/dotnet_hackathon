@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Frequency Analysis</title>
+
+
+</head>
+<body>
+    <input type="file" id="fileInput" />
+    <button onclick="processFile()">Process File</button>
+
+    <script>
+        function processFile() {
+            const fileInput = document.getElementById('fileInput');
+            const file = fileInput.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                reader.onload = function (e) {
+                    const audioData = e.target.result;
+                    processAudioData(audioData);
+                };
+
+                reader.readAsArrayBuffer(file);
+            } else {
+                alert("Please select a file.");
+            }
+        }
+
+        function processAudioData(audioData) {
+            const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+            audioContext.decodeAudioData(audioData, function(decodedData) {
+                const sampleRate = decodedData.sampleRate;
+                const channelData = decodedData.getChannelData(0);  // Assuming mono audio
+
+                const analyser = audioContext.createAnalyser();
+                analyser.fftSize = 2048;  // Adjust the FFT size as needed
+
+                const bufferLength = analyser.frequencyBinCount;
+                const dataArray = new Uint8Array(bufferLength);
+
+                const source = audioContext.createBufferSource();
+                source.buffer = decodedData;
+                source.connect(analyser);
+                analyser.connect(audioContext.destination);
+                //楽曲の再生
+                // source.start();
+
+                const frameSize = 1024;  // Adjust the frame size as needed
+                const overlap = 512;    // Adjust the overlap as needed
+
+                const step = frameSize - overlap;
+                let start = 0;
+                let end = frameSize;
+                let frameNumber = 0;
+
+                while (end <= channelData.length) {
+                    analyser.getByteFrequencyData(dataArray);
+
+
+                    const frequencies = Array.from(dataArray).map((value, index) => index * sampleRate / analyser.fftSize);
+                    console.log(`Frame ${frameNumber}: ${frequencies.join(', ')}`);
+
+                    start += step;
+                    end += step;
+                    frameNumber++;
+                }
+            }, function(err) {
+                console.error('Error decoding audio data', err);
+            });
+        }
+    </script>
+</body>
+</html>
+
