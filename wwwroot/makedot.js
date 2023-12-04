@@ -2,8 +2,8 @@ const canvas = document.getElementById('canvas');
 const ctx = canvas.getContext('2d');
 const dots = []; // 水玉を保持する配列
 let animationFrameId = null; // アニメーションフレームID
-const minSize = 40; // 水玉の最低サイズ
-let useGradient = false; // グラデーションを使用するかどうかのフラグ
+const minSize = 0; // 水玉の最低サイズ
+let useGradient = true; // グラデーションを使用するかどうかのフラグ
 
 function resizeCanvas() {
     canvas.width = window.innerWidth;
