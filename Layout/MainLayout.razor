@@ -1,6 +1,6 @@
 ﻿@inherits LayoutComponentBase
-
-<canvas id="canvas" style="display: none; width: 1536px; height: 640px;"></canvas>
+<InputFile OnChange="OnFileSelected" />
+<canvas id="canvas" style="width: 1536px; height: 640px;"></canvas>
 @if (imageSource != null)
 {
     <img id="image" src="@imageSource" />
@@ -21,3 +21,4 @@ else
 }
 
 <script src="makedot.js"></script>
+<script src="calculate.js"></script>

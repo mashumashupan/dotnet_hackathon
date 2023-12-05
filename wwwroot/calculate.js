@@ -5,41 +5,49 @@ document.getElementById('fileInput').addEventListener('change', function (event)
       const reader = new FileReader();
 
       reader.onload = function (e) {
-          const audioContext = new (window.AudioContext || window.webkitAudioContext)();
-          const audioBuffer = decodeAudioData(audioContext, e.target.result);
-
-          audioBuffer.then(buffer => {
-              const frameSize = 2048;
-              const overlap = 512;
-
-              // Convert the buffer to Float32Array
-              const float32Array = new Float32Array(buffer.numberOfChannels * buffer.length);
-              for (let channel = 0; channel < buffer.numberOfChannels; channel++) {
-                  float32Array.set(buffer.getChannelData(channel), channel * buffer.length);
-              }
-
-              const step = frameSize - overlap;
-              let start = 0;
-              let end = frameSize;
-              let frameNumber = 0;
-
-              while (end <= float32Array.length) {
-                  const frame = float32Array.subarray(start, end);
-                  const volume = calculateRMS(frame);
-                  console.log(`${frameNumber},${volume}`);
-
-                  start += step;
-                  end += step;
-                  frameNumber++;
-              }
-          }).catch(error => {
-              console.error('Error decoding audio data:', error);
-          });
+          calculate(e.target.result);
       };
 
       reader.readAsArrayBuffer(file);
   }
 });
+
+function calculate(arrayBuffer) {
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+    const audioBuffer = decodeAudioData(audioContext, arrayBuffer.buffer);
+
+    let resultCsv = "";
+    audioBuffer.then(buffer => {
+        const frameSize = 2048;
+        const overlap = 512;
+
+        // Convert the buffer to Float32Array
+        const float32Array = new Float32Array(buffer.numberOfChannels * buffer.length);
+        for (let channel = 0; channel < buffer.numberOfChannels; channel++) {
+            float32Array.set(buffer.getChannelData(channel), channel * buffer.length);
+        }
+
+        const step = frameSize - overlap;
+        let start = 0;
+        let end = frameSize;
+        let frameNumber = 0;
+
+        while (end <= float32Array.length) {
+            const frame = float32Array.subarray(start, end);
+            const volume = calculateRMS(frame);
+            // console.log(`${frameNumber},${volume}`);
+            resultCsv.concat(`${frameNumber},${volume}\n`);
+
+            start += step;
+            end += step;
+            frameNumber++;
+        }
+    }).catch(error => {
+        console.error('Error decoding audio data:', error);
+    });
+
+    return resultCsv;
+}
 
 function decodeAudioData(audioContext, arrayBuffer) {
   return new Promise((resolve, reject) => {

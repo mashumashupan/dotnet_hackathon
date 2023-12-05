@@ -27,10 +27,15 @@ function toggleGradient() {
     useGradient = !useGradient;
 }
 
-function createDotWithGrowingAnimation() {
+function createDotWithGrowingAnimation(volume) {
+
+    console.log("make dot");
+
     const x = Math.random() * canvas.width;
     const y = Math.random() * canvas.height;
-    const maxSize = Math.random() * 80 + minSize; // 最終サイズはランダムで、最低サイズを加える
+    // const maxSize = Math.random() * 80 + minSize; // 最終サイズはランダムで、最低サイズを加える
+    // 音量からサイズを決定（音量の幅は0.01~0.5程度）”
+    const maxSize = volume * 80 + minSize; // 最終サイズはランダムで、最低サイズを加える
     const color = `rgb(${Math.random() * 255}, ${Math.random() * 255}, ${Math.random() * 255})`; // 色はランダム
     const dot = { x, y, size: minSize, maxSize, color, growing: true }; // 初期サイズを最低サイズに設定
     dots.push(dot); // 水玉を配列に保存
