@@ -9,6 +9,7 @@ Before running the application, ensure that you have the following prerequisites
 Download .NET 8
 
 ## Configuration
+...
 
 ## Usage
 Run the application:
