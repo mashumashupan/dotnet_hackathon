@@ -1,4 +1,4 @@
-# title
+# Generating watercolors from music
 
 ## Overview
 This AI application is developed in .NET 8. It uses AI to output a polka dot pattern from the pitch, volume, and time information of an input music file. By inputting the polka dot pattern for each note into the image-to-image AI, the pattern is converted into a real-time watercolor painting and output, finally producing a single picture.
