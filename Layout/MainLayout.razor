@@ -1,14 +1,17 @@
 ﻿@inherits LayoutComponentBase
-<InputFile OnChange="OnFileSelected" />
-<canvas id="canvas" style="width: 1536px; height: 640px;"></canvas>
+@if (!hasFile)
+{
+    <InputFile OnChange="OnFileSelected" />
+}
+<canvas id="canvas" style="display: none; width: 1536px; height: 640px;"></canvas>
 @if (imageSource != null)
 {
     <img id="image" src="@imageSource" />
 }
-else
+else if (hasFile)
 {
     <div class="loader">
-        <div class="jumpy-bars">
+    <div class="jumpy-bars">
         <div class="bar" id="bar1"></div>
         <div class="bar" id="bar2"></div>
         <div class="bar" id="bar3"></div>
@@ -16,8 +19,8 @@ else
         <div class="bar" id="bar5"></div>
         <div class="bar" id="bar6"></div>
         <div class="bar" id="bar7"></div>
-        </div>
     </div>
+</div>
 }
 
 <script src="makedot.js"></script>

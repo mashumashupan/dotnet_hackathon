@@ -12,12 +12,12 @@ document.getElementById('fileInput').addEventListener('change', function (event)
   }
 });
 
-function calculate(arrayBuffer) {
+async function calculate(arrayBuffer) {
     const audioContext = new (window.AudioContext || window.webkitAudioContext)();
     const audioBuffer = decodeAudioData(audioContext, arrayBuffer.buffer);
 
     let resultCsv = "";
-    audioBuffer.then(buffer => {
+    await audioBuffer.then(buffer => {
         const frameSize = 2048;
         const overlap = 512;
 
@@ -35,8 +35,8 @@ function calculate(arrayBuffer) {
         while (end <= float32Array.length) {
             const frame = float32Array.subarray(start, end);
             const volume = calculateRMS(frame);
-            // console.log(`${frameNumber},${volume}`);
-            resultCsv.concat(`${frameNumber},${volume}\n`);
+            const line = `${frameNumber},${volume}`;
+            resultCsv += line + "\n";
 
             start += step;
             end += step;
@@ -45,7 +45,7 @@ function calculate(arrayBuffer) {
     }).catch(error => {
         console.error('Error decoding audio data:', error);
     });
-
+    
     return resultCsv;
 }
 
