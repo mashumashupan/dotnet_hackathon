@@ -5,8 +5,10 @@ This AI application is developed in .NET 8. It uses AI to output a polka dot pat
 
 ## Prerequisites
 Before running the application, ensure that you have the following prerequisites installed:
-.NET 8 SDK: Download .NET 8
-Configuration
+.NET 8 SDK:
+Download .NET 8
+
+## Configuration
 
 ## Usage
 Run the application:
