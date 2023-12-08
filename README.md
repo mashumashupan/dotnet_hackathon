@@ -23,3 +23,4 @@ The application will animate a flow image as follows
 4. The image to image AI outputs the polka dots in a watercolor style in real time.
 
 5. An animation is played in which the sound is drawn as a picture along with the music, and finally the song is output as a single picture.
+![IMG_3880](https://github.com/mashumashupan/dotnet_hackathon/assets/103844832/6ec54310-ac2b-4f98-b878-185a4a6ba2dc)
